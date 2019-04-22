@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="mcraei5_mcraeit" EntityNamespace="McraeitContext" ContextNamespace="McraeitContext" Class="McraeitDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="44e717fd-1a5d-4469-89d5-c0eb2e5f73cd" Provider="Devart.Data.MySql.Linq.Provider.MySqlDataProvider, Devart.Data.MySql.Linq" Extended="true" xmlns="http://schemas.devart.com/linqconnect/mapping">
+  <Connection Mode="ConnectionString" ConnectionString="User Id=mcraei5_dmcquiggin;Password=McRaeDM4090;Host=mcraeimaging.com;Database=mcraei5_mcraeit;Persist Security Info=True" Provider="Devart.Data.MySql" />
+  <Table Name="mcraei5_mcraeit.CompanyAccounts" Member="CompanyAccounts">
+    <Type Name="CompanyAccount" ed:Guid="76881a4a-f073-4623-b5b8-cd1d4293e1f5">
+      <Column Name="ID" Type="System.Int32" AutoSync="OnInsert" DbType="int(11) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="11" ed:ValidateRequired="true" ed:Guid="1f600e11-5b34-4de1-8cda-92000d7b8002" />
+      <Column Name="Name" Type="System.String" DbType="varchar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="5e9c3dff-6cf4-4f70-8add-56afa90078d3" />
+      <Column Name="EMail" Type="System.String" DbType="varchar(255) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="42b9765c-ffc9-47f3-b2e9-e8ad1cc3a2d0" />
+      <Column Name="Login" Type="System.String" DbType="varchar(150) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="150" Unicode="true" ed:ValidateMaxLength="150" ed:ValidateRequired="false" ed:Guid="5c35862b-91fd-493c-904d-3eac6b2fbdf3" />
+      <Column Name="`Password`" Member="Password" Type="System.String" DbType="varchar(50) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="1c378580-077d-4cf5-bbfc-38ca4656c8dd" />
+      <Column Name="Notes" Type="System.String" DbType="longtext NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" Unicode="true" ed:ValidateRequired="false" ed:Guid="1061d038-6dd4-4dda-a792-4da46927fccf" />
+    </Type>
+  </Table>
+  <Table Name="mcraei5_mcraeit.Configurations" Member="Configurations">
+    <Type Name="Configuration" ed:Guid="7ad188b3-6b8f-4914-9c57-cd197474b21f">
+      <Column Name="ID" Type="System.Int32" AutoSync="OnInsert" DbType="int(11) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="11" ed:ValidateRequired="true" ed:Guid="1271b24d-6636-460c-bd98-f88579e8b906" />
+      <Column Name="Device" Type="System.String" DbType="varchar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="100" ed:ValidateMaxLength="100" ed:ValidateRequired="true" ed:Guid="a7ca2b6a-450a-458c-8c8c-19cd97b654db" />
+      <Column Name="Settings" Type="System.String" DbType="longtext NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" ed:ValidateRequired="false" ed:Guid="da408cf2-93dd-4fa1-8380-147611e20736" />
+    </Type>
+  </Table>
+  <Table Name="mcraei5_mcraeit.Departments" Member="Departments">
+    <Type Name="Department" ed:Guid="2d03bf2b-2a5d-46d6-8adf-d136288ab439">
+      <Column Name="ID" Type="System.Int32" AutoSync="OnInsert" DbType="int(11) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="11" ed:ValidateRequired="true" ed:Guid="950b4c87-d3a7-4dac-b614-ce4552c99cfa" />
+      <Column Name="Name" Type="System.String" DbType="varchar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="100" Unicode="true" ed:ValidateMaxLength="100" ed:ValidateRequired="true" ed:Guid="4b01063d-9e78-4f14-a0bc-8b4deb8cb237" />
+    </Type>
+  </Table>
+  <Table Name="mcraei5_mcraeit.EmployeeLogins" Member="EmployeeLogins">
+    <Type Name="EmployeeLogin" ed:Guid="2c014c87-543a-4ab2-962c-fc99e78ec947">
+      <Column Name="ID" Type="System.Int32" AutoSync="OnInsert" DbType="int(11) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="11" ed:ValidateRequired="true" ed:Guid="305eb065-3cb4-49c1-8e6c-7818d1d2f662" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="int(11) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="NULL" Precision="11" ed:ValidateRequired="false" ed:Guid="9a247a51-8222-44e3-830b-2a57fcc550b5" />
+      <Column Name="Description" Type="System.String" DbType="longtext NOT NULL" CanBeNull="false" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="true" ed:Guid="d6a9bf84-533a-4fc1-b9f8-ec3eef6d84ed" />
+      <Column Name="Login" Type="System.String" DbType="varchar(255) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="7ba2bf43-db11-4a6e-9628-a89fe91a99ff" />
+      <Column Name="`Password`" Member="Password" Type="System.String" DbType="varchar(255) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="c9a07bb2-f4d6-40d7-9381-447efe4a4548" />
+      <Association Name="Employee_EmployeeLogin" ed:AssociationGuid="9e4d0663-4e66-4ba5-9769-6dcb7d657f9b" Member="Employee" ed:Guid="6092a812-8608-423a-94f0-85d3a3a9ef82" ThisKey="EmployeeID" OtherKey="ID" Type="Employee" DeleteRule="RESTRICT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="mcraei5_mcraeit.Employees" Member="Employees">
+    <Type Name="Employee" ed:Guid="e7eb4bf5-5c5e-4cc5-91de-83b13e1d0d95">
+      <Column Name="ID" Type="System.Int32" AutoSync="OnInsert" DbType="int(11) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="11" ed:ValidateRequired="true" ed:Guid="a427ba1c-aada-4e32-8c7b-0c3d9af9383e" />
+      <Column Name="Name" Type="System.String" DbType="varchar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="0290a174-2d28-4ee6-b072-95a33d5160fe" />
+      <Column Name="Department" Type="System.String" DbType="varchar(255) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="46dd2210-bfe2-4e6d-b231-ed03632b8cee" />
+      <Column Name="Ext" Type="System.String" DbType="varchar(5) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="5" Unicode="true" ed:ValidateMaxLength="5" ed:ValidateRequired="false" ed:Guid="7d77ae9e-a350-4e34-a21f-43a4d2af30d8" />
+      <Column Name="DID" Type="System.String" DbType="varchar(15) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="15" Unicode="true" ed:ValidateMaxLength="15" ed:ValidateRequired="false" ed:Guid="d463d457-c425-47c8-9443-d0bbff957122" />
+      <Column Name="Phone" Type="System.String" DbType="varchar(15) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="15" Unicode="true" ed:ValidateMaxLength="15" ed:ValidateRequired="false" ed:Guid="abe3a984-b8e7-40c6-81bd-3f2ba35e4f92" />
+      <Column Name="Cell" Type="System.String" DbType="varchar(15) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="15" Unicode="true" ed:ValidateMaxLength="15" ed:ValidateRequired="false" ed:Guid="e3223bb1-2dff-4b6d-8ea6-de2dc4cb0369" />
+      <Column Name="EMail" Type="System.String" DbType="varchar(255) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="3934b5e4-e2c2-40cf-80ae-8465686fc508" />
+      <Column Name="EMailPassword" Type="System.String" DbType="varchar(255) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="468f7870-80ff-452a-94a5-9f3825ca985a" />
+      <Column Name="ComputerUser" Type="System.String" DbType="varchar(255) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="bbce2ea2-f9c5-4ebf-8305-8c9bbddcd418" />
+      <Column Name="ComputerPassword" Type="System.String" DbType="varchar(255) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="5c29c46f-0a58-4840-b034-f3209e022ad9" />
+      <Column Name="Title" Type="System.String" DbType="varchar(255) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="e125ef72-e288-4913-a2cb-ce826c32d4b8" />
+      <Column Name="List" Type="System.Boolean" DbType="tinyint(1) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="NULL" ed:ValidateRequired="false" ed:Guid="f204256b-aa6b-4316-b767-d19df591ebe2" />
+      <Column Name="PhonePIN" Type="System.String" DbType="varchar(5) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="5" Unicode="true" ed:ValidateMaxLength="5" ed:ValidateRequired="false" ed:Guid="3e7d4f07-d763-4d57-acab-30b86d65587f" />
+      <Column Name="ServerLogin" Type="System.String" DbType="varchar(255) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="04c042b9-8648-4451-90f4-3aa4a70866f6" />
+      <Column Name="ServerPassword" Type="System.String" DbType="varchar(255) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="459521a6-725c-4418-9e82-58bca5b08bb6" />
+      <Column Name="VPNAccess" Type="System.Boolean" DbType="tinyint(1) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="NULL" ed:ValidateRequired="false" ed:Guid="daa809d6-b463-442b-ab73-1f0aa5f4134a" />
+      <Column Name="ServerGroups" Type="System.String" DbType="longtext NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" Unicode="true" ed:ValidateRequired="false" ed:Guid="1bba00e2-e245-447d-b4ec-1876a2499022" />
+      <Column Name="Notes" Type="System.String" DbType="longtext NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" Unicode="true" ed:ValidateRequired="false" ed:Guid="716b50e0-4095-4a97-b99d-21e7731dd7b9" />
+      <Column Name="SecurityCode" Type="System.String" DbType="varchar(255) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="false" ed:Guid="2036d85d-e720-4cb7-b039-87f56cdd66e7" />
+      <Column Name="SecuritySlot" Type="System.Int32" DbType="int(11) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="NULL" Precision="11" ed:ValidateRequired="false" ed:Guid="b270ddf5-eeb0-4497-861e-270c97407a4c" />
+      <Association Name="Employee_EmployeeLogin" ed:AssociationGuid="9e4d0663-4e66-4ba5-9769-6dcb7d657f9b" Member="EmployeeLogins" ed:Guid="0d11b120-ae80-4e44-95c4-afecf305e1b7" ThisKey="ID" OtherKey="EmployeeID" Type="EmployeeLogin" />
+      <Association Name="Employee_Ticket" ed:AssociationGuid="a3f729cf-7e95-4dc0-965d-fddb5b4068e6" Member="Tickets" ed:Guid="f34a8c8a-6759-417a-abb6-9585a5311eba" ThisKey="ID" OtherKey="EmployeeID" Type="Ticket" />
+    </Type>
+  </Table>
+  <Table Name="mcraei5_mcraeit.IPAddresses" Member="IPAddresses">
+    <Type Name="IPAddress" ed:Guid="abb53d1f-0b42-471e-8425-43843386f203">
+      <Column Name="ID" Type="System.Int32" AutoSync="OnInsert" DbType="int(11) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="11" ed:ValidateRequired="true" ed:Guid="4ebee4a4-3ffa-4c3c-a669-c4e7f6ea6f89" />
+      <Column Name="Address" Type="System.String" DbType="varchar(33) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="33" Unicode="true" ed:ValidateMaxLength="33" ed:ValidateRequired="true" ed:Guid="d8a296f8-ffc1-461b-ba94-b2336793dc5f" />
+      <Column Name="Device" Type="System.String" DbType="longtext NOT NULL" CanBeNull="false" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="true" ed:Guid="ee12ee41-c2ef-460f-af28-f2aecd5f46bf" />
+      <Column Name="Notes" Type="System.String" DbType="longtext NOT NULL" CanBeNull="false" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="true" ed:Guid="22cb90b0-1462-4522-9089-0d6633a71d44" />
+    </Type>
+  </Table>
+  <Table Name="mcraei5_mcraeit.ServerGroups" Member="ServerGroups">
+    <Type Name="ServerGroup" ed:Guid="83d27d8f-db34-493f-87a0-ad67921908c9">
+      <Column Name="ID" Type="System.Int32" AutoSync="OnInsert" DbType="int(11) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="11" ed:ValidateRequired="true" ed:Guid="f1e466fb-258f-43a7-beea-8603d3955ada" />
+      <Column Name="GroupName" Type="System.String" DbType="varchar(100) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="100" Unicode="true" ed:ValidateMaxLength="100" ed:ValidateRequired="true" ed:Guid="6ee05686-bf99-4e18-a563-5eb8327aaa5c" />
+    </Type>
+  </Table>
+  <Table Name="mcraei5_mcraeit.Tickets" Member="Tickets">
+    <Type Name="Ticket" ed:Guid="9f95c784-af57-4a83-8656-0599d708d456">
+      <Column Name="ID" Type="System.Int32" AutoSync="OnInsert" DbType="int(11) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="11" ed:ValidateRequired="true" ed:Guid="9c903a9d-b6fe-4b0e-937d-9ee6e3f8745b" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="datetime NOT NULL" CanBeNull="false" UpdateCheck="Never" ed:ValidateRequired="true" ed:Guid="0bcc842e-7774-4b16-87b7-0b3c5a766d61" />
+      <Column Name="Completed" Type="System.Boolean" DbType="tinyint(1) NOT NULL" CanBeNull="false" UpdateCheck="Never" DefaultValue="0" ed:ValidateRequired="true" ed:Guid="7bf596ea-a1b4-4d0c-ab7d-ee167d340990" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="int(11) NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="NULL" Precision="11" ed:ValidateRequired="false" ed:Guid="a749f740-c025-47c6-9800-bb5d4fd0bbb9" />
+      <Column Name="Problem" Type="System.String" DbType="longtext NOT NULL" CanBeNull="false" UpdateCheck="Never" Unicode="true" ed:ValidateRequired="true" ed:Guid="0816234a-30b7-4cf1-b9f9-c2fc4ad49b7f" />
+      <Column Name="Solution" Type="System.String" DbType="longtext NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" Unicode="true" ed:ValidateRequired="false" ed:Guid="c6b80ba3-66e3-488f-a288-b1cb7dcbfb9b" />
+      <Column Name="Notes" Type="System.String" DbType="longtext NULL" CanBeNull="true" UpdateCheck="Never" DefaultValue="&quot;NULL&quot;" Unicode="true" ed:ValidateRequired="false" ed:Guid="0320c153-0bef-4fbc-857f-94d9e96ce1d9" />
+      <Association Name="Employee_Ticket" ed:AssociationGuid="a3f729cf-7e95-4dc0-965d-fddb5b4068e6" Member="Employee" ed:Guid="ee43235d-2069-4618-92a5-7b0b4b2b32a1" ThisKey="EmployeeID" OtherKey="ID" Type="Employee" DeleteRule="RESTRICT" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="mcraei5_mcraeit.Users" Member="Users">
+    <Type Name="User" ed:Guid="f55b3ad5-782b-47a0-a531-9a130689118e">
+      <Column Name="ID" Type="System.Int32" AutoSync="OnInsert" DbType="int(11) NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" Precision="11" ed:ValidateRequired="true" ed:Guid="1adc6976-7e42-4597-b304-765b758dc3d9" />
+      <Column Name="Name" Type="System.String" DbType="varchar(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="255" Unicode="true" ed:ValidateMaxLength="255" ed:ValidateRequired="true" ed:Guid="6e64ad8e-03bf-439b-a708-4d64ede4c3f5" />
+      <Column Name="User" Member="User1" Type="System.String" DbType="varchar(50) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="true" ed:Guid="02dbaa35-372e-41eb-beec-6fc756c97841" />
+      <Column Name="`Password`" Member="Password" Type="System.String" DbType="varchar(25) NOT NULL" CanBeNull="false" UpdateCheck="Never" MaxLength="25" Unicode="true" ed:ValidateMaxLength="25" ed:ValidateRequired="true" ed:Guid="c2797e9c-4fa1-4631-8f11-388d86aee6f0" />
+    </Type>
+  </Table>
+</Database>
